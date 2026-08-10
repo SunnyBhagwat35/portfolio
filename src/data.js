@@ -12,7 +12,7 @@ export const personal = {
   role: "Software Developer",
   // One or two sentences. Shows under your name in the hero.
   tagline:
-    "I build fast, reliable web apps, from Postgres schemas to pixel-level UI. Currently focused on developer tools and AI-powered products.",
+    "I build scalable, reliable backend systems that solve real-world problems, combining strong engineering practices with a focus on performance, simplicity, and reliability.",
   location: "Mumbai, India",
   // Set to "" to hide the availability line
   availability: "available for work",

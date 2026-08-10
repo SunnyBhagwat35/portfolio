@@ -32,12 +32,24 @@ export default function Projects() {
 
               <div className="project-links">
                 {project.liveUrl && (
-                  <a href={project.liveUrl} target="_blank" rel="noreferrer">
+                  <a href={project.liveUrl} target="_blank" rel="noreferrer"
+                  style={
+                          project.liveUrl === '#'
+                            ? { cursor: 'not-allowed', pointerEvents: 'none', opacity: 0.5 }
+                            : undefined
+                        }
+                  >
                     Live ↗
                   </a>
                 )}
                 {project.codeUrl && (
-                  <a href={project.codeUrl} target="_blank" rel="noreferrer">
+                  <a href={project.codeUrl} target="_blank" rel="noreferrer" 
+                  style={
+                          project.codeUrl === '#'
+                            ? { cursor: 'not-allowed', pointerEvents: 'none', opacity: 0.5 }
+                            : undefined
+                        }
+                  >
                     Code ↗
                   </a>
                 )}

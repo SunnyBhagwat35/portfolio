@@ -1,6 +1,14 @@
 import { personal, socials } from "../data.js";
 
+function resolveResumeUrl(url) {
+  if (!url) return "";
+  if (/^https?:\/\//i.test(url)) return url;
+  const base = import.meta.env.BASE_URL || "/";
+  return base.replace(/\/$/, "") + "/" + url.replace(/^\//, "");
+}
+
 export default function Hero() {
+  const resumeHref = resolveResumeUrl(personal.resumeUrl);
   return (
     <section className="hero container" id="top">
       {personal.availability && (
@@ -21,10 +29,10 @@ export default function Hero() {
         <a className="btn btn-primary" href={`mailto:${personal.email}`}>
           Get in touch
         </a>
-        {personal.resumeUrl && (
+        {resumeHref && (
           <a
             className="btn btn-ghost"
-            href={personal.resumeUrl}
+            href={resumeHref}
             target="_blank"
             rel="noreferrer"
           >

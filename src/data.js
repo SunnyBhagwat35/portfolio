@@ -25,7 +25,8 @@ export const personal = {
 export const socials = [
   { label: "GitHub", url: "https://github.com/SunnyBhagwat35" },
   { label: "LinkedIn", url: "https://www.linkedin.com/in/sunnybhagwat/" },
-  { label: "X / Twitter", url: "https://x.com/SunnyBhagwat35" },
+  { label: "X.com", url: "https://x.com/SunnyBhagwat35" },
+  { label: "StackOverflow", url: "https://stackoverflow.com/users/13023566/sunny-bhagwat" },
 ];
 
 export const about = {

@@ -25,20 +25,22 @@ export default function Hero() {
       </p>
       <p className="hero-tagline">{personal.tagline}</p>
 
-      <div className="hero-actions">
-        <a className="btn btn-primary" href={`mailto:${personal.email}`}>
-          Get in touch
-        </a>
-        {resumeHref && (
-          <a
-            className="btn btn-ghost"
-            href={resumeHref}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Resume
+      <div className="hero-actions" style={{ flexDirection: 'column', alignItems: 'flex-start',}}>
+        <div className="hero-actions">
+          <a className="btn btn-primary" href={`mailto:${personal.email}`}>
+            Get in touch
           </a>
-        )}
+          {resumeHref && (
+            <a
+              className="btn btn-ghost"
+              href={resumeHref}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Resume
+            </a>
+          )}
+        </div>
         <div className="hero-socials">
           {socials.map((s) => (
             <a key={s.label} href={s.url} target="_blank" rel="noreferrer">
